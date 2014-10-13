@@ -16,7 +16,13 @@ class MainScreen(Frame):
         self.initialiseUI()
         
     def initialiseUI(self):
-      
+
+        Image = PhotoImage(file=LOGO_FILENAME)
+        global label
+        label = Label(self.parent, image=Image, relief=RAISED)
+        label.image = Image
+        label.pack()
+    
         self.parent.title(WINDOW_TITLE)
         
         menubar = Menu(self.parent)

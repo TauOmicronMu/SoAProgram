@@ -9,4 +9,3 @@ MENU_SEARCH_TEXT = u"Search Records"
 MENUBAR_FILE_TEXT = u"File"
 MENUBAR_MENU_TEXT = u"Menu"
 
-

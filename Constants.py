@@ -1,6 +1,6 @@
 #Constants
 
-VERSION_NUMBER = "0.0.0"
+VERSION_NUMBER = "0.1.0"
 
 WINDOW_GEOMETRY = "900x600+200+50"
 
@@ -19,5 +19,6 @@ WRITE_BINARY_MODE = "wb"
 
 #File Names
 
-PASSWORD_FILENAME = "Password.txt"
 LOG_FILENAME = "Log.txt"
+LOGO_FILENAME = "SoAName.gif"
+PASSWORD_FILENAME = "Password.txt"
