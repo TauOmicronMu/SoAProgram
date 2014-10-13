@@ -3,6 +3,7 @@ from TimeStamp import *
 from logging import *
 from Constants import *
 from CreatePopup import *
+from SearchMemberScreen import *
 
 from Strings import *
 
@@ -45,6 +46,8 @@ class MainScreen(Frame):
         MainMenu.add_cascade(label=MENU_AMEND_TEXT, command=self.AmendRecord)
         MainMenu.add_command(label=MENU_DELETE_TEXT)
 
+        MainMenu.add_separator()
+
         expMenu = Menu(menubar)
         
         menubar.add_cascade(label=MENUBAR_FILE_TEXT, underline=0, menu=fileMenu)
@@ -68,8 +71,18 @@ class MainScreen(Frame):
         pass
 
     def SearchRecords(self):
-        pass
+        with open(LOG_FILENAME, APPEND_MODE) as f:
+            f.write(TimeStamp() + SEARCH_SELECTED_TEXT)
+        self.parent.destroy()
+        with open(LOG_FILENAME, APPEND_MODE) as f:
+            f.write(TimeStamp() + WINDOW_TERMINATED_TEXT)
+        root = Tk()
+        root.geometry(WINDOW_GEOMETRY)
+        app = SearchMemberScreen(root)
+        root.mainloop()
 
     def AmendRecord(self):
         pass
 
+from MainScreen import *
+from SearchMemberScreen import *

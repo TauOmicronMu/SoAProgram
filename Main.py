@@ -3,6 +3,7 @@ from Constants import *
 from logging import *
 from TimeStamp import *
 from MainScreen import *
+from SearchMemberScreen import *
 
 from Strings import *
 from LoggingStrings import *
